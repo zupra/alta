@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+
+<section class="sec_1">
+
+  <main w3-include-html="./main.html"></main>
+
+
+  <aside w3-include-html="./aside.html"></aside>
+
+
+</section>
+
+
+
+
+<section class="whatChoose">
+  <h1>Не знаете что выбрать?</h1>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam quod delectus libero saepe distinctio reiciendis laboriosam porro cupiditate, ipsum ea quibusdam impedit, voluptatibus soluta similique perspiciatis esse tempora, doloremque!
+</section>
+
+
+
+<section class="color">
+  <h1>Какой цвет выбрать?</h1>
+
+
+  Большой выбор цветов
+
+  <div class="colorpicker">
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+    <a href="" data-color="цвет золотого золота"></a>
+
+  </div>
+
+
+</section>
+
+
+
+<section>
+  <h1>Не знаете где купить?</h1>
+</section>
+
+<section>
+  <h1>Что нужно знать о монтаже?</h1>
+</section>
+
+
+
+</body>
+<script>
+   //helper
+   (function() {
+     //http://www.w3schools.com/howto/howto_html_include.asp
+     myHTMLInclude();
+
+     function myHTMLInclude() {
+       var z, i, a, file, xhttp;
+       z = document.getElementsByTagName("*");
+       for (i = 0; i < z.length; i++) {
+         if (z[i].getAttribute("w3-include-html")) {
+           a = z[i].cloneNode(false);
+           file = z[i].getAttribute("w3-include-html");
+           var xhttp = new XMLHttpRequest();
+           xhttp.onreadystatechange = function() {
+             if (xhttp.readyState == 4 && xhttp.status == 200) {
+               a.removeAttribute("w3-include-html");
+               a.innerHTML = xhttp.responseText;
+               z[i].parentNode.replaceChild(a, z[i]);
+               myHTMLInclude();
+             }
+           }
+           xhttp.open("GET", file, true);
+           xhttp.send();
+           return;
+         }
+       }
+     }
+
+   })();
+ </script>
+
+</html>
