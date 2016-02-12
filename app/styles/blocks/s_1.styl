@@ -1,0 +1,30 @@
+.tablist
+  width 20%
+  float left
+  a
+
+    display block
+    padding-top 60px
+    background url('http://placehold.it/50') no-repeat
+
+
+
+.vs
+  width 40%
+  float left
+
+
+
+.advantage
+  list-style none
+  li
+    &:before
+      content '● '
+
+  &.plus li
+    &:before
+      color #58b200
+
+  &.minus li
+    &:before
+      color #ff3636
