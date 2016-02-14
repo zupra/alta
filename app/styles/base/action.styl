@@ -1,9 +1,19 @@
 
+input
+  border 1px solid #DDD
+  padding .2em .5em
+
+  display blocks
+  margin-bottom .5em
+
+
+
+
 
 .btn
   display inline-block
   border 1px solid rgba(#FFF, .7)
-  padding .5em 1em
+  padding .4em 1em
   text-decoration none
   color #FFF
   &:hover
@@ -18,5 +28,10 @@
     //&:hover
 
   &.gray
-    background #DDD
     color #444
+    background #FFF
+    box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.24)
+
+    &.active
+      background #DDD
+      box-shadow: none
