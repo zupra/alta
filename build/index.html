@@ -7,6 +7,7 @@
   <title>Index</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./js/bower_components/fullpage.js/jquery.fullPage.css">
 </head>
 
 <body>
@@ -16,19 +17,19 @@
 <div id="main" w3-include-html="./main.html"></div>
 
 
-<div class="kineticScroll">
+<div id="fullpage" class="kineticScroll">
 
 
   <!-- Не знаете что выбрать -->
-  <section w3-include-html="./s_1.html"></section>
+  <section class="section" w3-include-html="./s_1.html"></section>
   <!-- Какой цвет выбрать? -->
-  <section w3-include-html="./s_2.html"></section>
+  <section class="section" w3-include-html="./s_2.html"></section>
   <!-- Не знаете где купить? -->
-  <section id="s_3" w3-include-html="./s_3.html"></section>
+  <section class="section" id="s_3" w3-include-html="./s_3.html"></section>
   <!-- Что нужно знать о монтаже? -->
-  <section w3-include-html="./s_4.html"></section>
+  <section class="section" w3-include-html="./s_4.html"></section>
   <!-- Про что еще не забыть? -->
-  <section w3-include-html="./s_5.html"></section>
+  <section class="section" w3-include-html="./s_5.html"></section>
 
 
 </div>
@@ -48,12 +49,7 @@
 
 
 
-
 <footer w3-include-html="./footer.html"></footer>
-
-
-
-
 
 
 
@@ -98,16 +94,36 @@
  </script>
 
 
+
+
+
  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- https://cdnjs.com/libraries/fullPage.js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/vendors/jquery.easings.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/vendors/jquery.slimscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
+
+
 
  <script>
  $(function() {
 
-   $('.js-').click(function(e) {
-     var modal = $('#modal-load');
-     e.preventDefault();
-     modal.load('*.html').show();
-   });
+
+
+   function isElementInViewport(el) {
+     var rect = el.getBoundingClientRect();
+     return (
+       rect.top >= 0 &&
+       rect.bottom <= $(window).height()
+     );
+   }
+
+
+  // $('#fullpage').fullpage({
+  //   //scrollOverflow: true
+  // });
 
  });
  </script>

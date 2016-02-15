@@ -1,14 +1,4 @@
-
-input
-  border 1px solid #DDD
-  padding .2em .5em
-
-  display blocks
-  margin-bottom .5em
-
-
-
-
+// Паца
 
 .btn
   display inline-block
@@ -21,17 +11,52 @@ input
 
   &.blue
     background #0071bb
-    //&:hover
+    &:hover
+      background #0063A5
 
   &.red
     background #ff4242
-    //&:hover
+    &:hover
+      background #D43838
 
   &.gray
     color #444
     background #FFF
-    box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.24)
+    //box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.24)
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.24)
+    &:hover
+      box-shadow: none
 
     &.active
       background #DDD
       box-shadow: none
+
+
+
+.menuline
+  height 50px
+  //line-height 50px
+  //background #0071BB
+  a
+    float left
+    line-height 50px
+
+    background #0071BB
+    padding 0 3em
+
+    color #FFF
+    text-decoration none
+
+    //& + a
+
+
+
+
+
+    //grba(#FFF, .3)
+
+    &:hover
+      background #2e8BC7
+
+    &.active
+      background #0061a1
