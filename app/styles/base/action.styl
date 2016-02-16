@@ -1,4 +1,3 @@
-// Паца
 
 .btn
   display inline-block
@@ -32,23 +31,30 @@
       box-shadow: none
 
 
-
+// "Популярные товары"
 .menuline
   height 50px
+  width 100%
+  //display flex
+  //justify-content space-around
   //line-height 50px
   //background #0071BB
+
+
+  text-align center
   a
     float left
+    width calc(100%/5)
     line-height 50px
 
     background #0071BB
-    padding 0 3em
+    //padding 0 3em
 
     color #FFF
     text-decoration none
 
-    //& + a
-
+    & + a
+      border-left 1px solid rgba(#FFF, .2)
 
 
 

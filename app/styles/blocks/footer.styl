@@ -1,15 +1,18 @@
 footer
   width 1000px
-
-  margin 5em auto
+  margin 5em auto 0
 
   color #000
-  display flex
 
+  display flex
+  flex-wrap wrap
   justify-content space-around
 
-  address,form
-    width 20%
+
+  form
+    width 22%
+  address //,form
+    width 25%
     //width 30%
 
   nav
@@ -21,3 +24,12 @@ footer
       &:hover
         color #0071BB
         text-decoration underline
+
+
+  .copyright
+    margin 4em 0 3em
+    //align-self stretch
+    width 100%
+
+    i + i
+      float right

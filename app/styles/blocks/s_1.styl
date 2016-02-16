@@ -2,25 +2,54 @@
   width 20%
   float left
   text-align center
+
   a
-
     display block
-    padding-top 60px
-
+    padding 54px 0 18px
     color #777
     font-weight 400
-
     text-decoration none
 
-    background url('http://placehold.it/50') top center no-repeat
+    position relative
 
+    &:before
+
+      content ''
+
+      position absolute
+      top 0
+      left 50%
+      margin-left -25px
+
+      //box-sizing border-box
+      width 45px
+      height 45px
+
+      border 3px solid transparent
+
+
+    //background url('http://placehold.it/50') no-repeat
+    &:nth-child(1):before
+      background url('../img/material/tablist_1.png') center no-repeat
+    &:nth-child(2):before
+      background url('../img/material/tablist_2.png') center no-repeat
+    &:nth-child(3):before
+      background url('../img/material/tablist_3.png') center no-repeat
+    &:nth-child(4):before
+      background url('../img/material/tablist_4.png') center no-repeat
 
     &.active
-      //border 2px solid #FFF
+      &:before
+        border 3px solid #FFF
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.24)
 
-      //box-shadow: 0 4px 5px rgba(0, 0, 0, 0.24)
 
-      //box-shadow
+    &:hover
+      &:before
+        border 3px solid #FFF
+        //transition border .3s
+
+
 
 
 
@@ -28,7 +57,6 @@
 .vs
   width 40%
   float left
-
 
 
 .advantage
@@ -44,3 +72,14 @@
   &.minus li
     &:before
       color #ff3636
+
+
+
+
+#s_1
+  .btn
+    margin 1em auto 0
+
+    position relative
+    left 30%
+    //float right
