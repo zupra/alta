@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -120,9 +120,31 @@
      );
    }
 
-
+  var totalSlides = $('#fullpage .section').length;
   $('#fullpage').fullpage({
-    //scrollOverflow: true
+    //scrollOverflow: true, //если контент выходит за границы
+    //navigation: true, //панель по секциям
+    //navigationTooltips //массив всплывающих подсказок
+
+    //Design
+    //verticalCentered: true,
+    //resize : false,
+
+
+    //afterLoad: function(anchorLink, index){},
+
+    afterLoad: function(anchorLink, index){
+      if (index === totalSlides) {
+        //$.fn.fullpage.setAutoScrolling(false);
+        //$.fn.fullpage.destroy();
+        $.fn.fullpage.destroy('all');
+        $.fn.fullpage.reBuild();
+      }
+    }
+
+
+
+
   });
 
  });
