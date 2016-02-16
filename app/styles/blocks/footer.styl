@@ -9,6 +9,13 @@ footer
   justify-content space-around
 
 
+  a
+    color #000
+    text-decoration none
+    &:hover
+      color #0071BB
+      text-decoration underline
+
   form
     width 22%
   address //,form
@@ -19,17 +26,14 @@ footer
     //width 20%
     a
       display block
-      color #000
-      text-decoration none
-      &:hover
-        color #0071BB
-        text-decoration underline
 
 
-  .copyright
-    margin 4em 0 3em
-    //align-self stretch
-    width 100%
+.copyright
+  margin 4em 0 3em
+  //align-self stretch
+  width 100%
 
-    i + i
-      float right
+  a
+    float right
+    padding-left 80px
+    background url(../img/logo-completo.png) no-repeat center left
