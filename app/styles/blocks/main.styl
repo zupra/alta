@@ -4,6 +4,9 @@
   min-height 100vh //100%
   //background url(../img/test_bg.jpg) center/cover no-repeat
   display flex
+  align-items stretch
+  flex-wrap wrap
+
 
   position relative
 
@@ -55,7 +58,6 @@
     width 360px
 
 
-
   .contactDiv
     *
       //float left
@@ -69,12 +71,9 @@
 
 
 
-
 .main
   C_W()
   padding 2em 0 0
-
-
 
   h1
     background url(../img/logo.png) center 20px no-repeat
@@ -92,7 +91,7 @@
 
 
 
-//
+//меню с иконками
 .main-icon
   width 600px
   margin 0 auto 10em
@@ -112,26 +111,24 @@
       left 50px
       margin-left -30px
 
-
       width 60px
       height 60px
       //background rgba(#FFF, .5)
-    &:nth-child(1):before
-      background url(../img/svg_main/drain.svg)
 
+    &:nth-child(1):before
+      background url(../img/svg_main/siding.svg)
     &:nth-child(2):before
       background url(../img/svg_main/interior_trim.svg)
-
     &:nth-child(3):before
+
+      background url(../img/svg_main/drain.svg)
+    &:nth-child(4):before
+      background url(../img/svg_main/rainwater_system.svg)
+    &:nth-child(5):before
       background url(../img/svg_main/lawn_panel.svg)
 
-    &:nth-child(4):before
-      background url(../img/svg_main/mount.svg)
-
-    &:nth-child(5):before
-      background url(../img/svg_main/rainwater_system.svg)
-
-
+    // &:nth-child(6):before
+    //   background url(../img/svg_main/rainwater_system.svg)
 
 
 /*

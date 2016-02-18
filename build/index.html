@@ -16,47 +16,47 @@
 
   <div id="main" w3-include-html="./main.html"></div>
 
-
-
-
-
-
-
-
+<!--
 
   <ul id="myMenu">
-      <li data-menuanchor="1" class="active"><a href="#1">1</a></li>
-      <li data-menuanchor="2"><a href="#2">2</a></li>
-      <li data-menuanchor="3"><a href="#3">3</a></li>
-      <li data-menuanchor="4"><a href="#4">4</a></li>
-      <li data-menuanchor="5"><a href="#5">5</a></li>
+      <li data-menuanchor="s1" class="active"><a href="#s1">1</a></li>
+      <li data-menuanchor="s2"><a href="#s2">2</a></li>
+      <li data-menuanchor="s3"><a href="#s3">3</a></li>
+      <li data-menuanchor="s4"><a href="#s4">4</a></li>
+      <li data-menuanchor="s5"><a href="#s5">5</a></li>
   </ul>
+ -->
 
-
-  <nav id="TEST_SECOND_NAV">
-    <a href="">
-      <svg width="18" height="14" viewBox="0 0 18 14">
-        <g stroke-width="2" stroke="#000">
-          <line x1="0" y1="1" x2="18" y2="1"></line>
-          <line x1="0" y1="7" x2="18" y2="7"></line>
-          <line x1="0" y1="13" x2="18" y2="13"></line>
-        </g>
-      </svg>
-      &nbsp; Весь сайт </a>
-    <a href="">О компании</a>
-    <a href="">Продукция</a>
-    <a href="">Монтаж</a>
-    <a href="">Где купить </a>
-    <a href="">Галерея</a>
-  </nav>
 
 
 
 
   <div id="fullpage" class="kineticScroll">
 
+
+
+
     <!-- Не знаете что выбрать -->
     <div class="section">
+
+<nav id="TEST_SECOND_NAV">
+  <a href="">
+    <svg width="18" height="14" viewBox="0 0 18 14">
+      <g stroke-width="2" stroke="#000">
+        <line x1="0" y1="1" x2="18" y2="1"></line>
+        <line x1="0" y1="7" x2="18" y2="7"></line>
+        <line x1="0" y1="13" x2="18" y2="13"></line>
+      </g>
+    </svg>
+    &nbsp; Весь сайт </a>
+  <a href="">О компании</a>
+  <a href="">Продукция</a>
+  <a href="">Монтаж</a>
+  <a href="">Где купить </a>
+  <a href="">Галерея</a>
+</nav>
+
+
       <section id="s_1" w3-include-html="./s_1.html"></section>
     </div>
     <!-- Какой цвет выбрать? -->
@@ -81,16 +81,15 @@
 
 
 
-  <!-- catalog -->
-  <section w3-include-html="./to_catalog.html"></section>
-  <!-- О компании -->
-  <section id="about" w3-include-html="./about.html"></section>
-  <!-- Фотографии -->
-  <section id="photo" w3-include-html="./photo.html"></section>
-  <!-- Новости -->
-  <section id="news" w3-include-html="./news.html"></section>
-  <footer w3-include-html="./footer.html"></footer>
-
+    <!-- catalog -->
+    <section w3-include-html="./to_catalog.html"></section>
+    <!-- О компании -->
+    <section id="about" w3-include-html="./about.html"></section>
+    <!-- Фотографии -->
+    <section id="photo" w3-include-html="./photo.html"></section>
+    <!-- Новости -->
+    <section id="news" w3-include-html="./news.html"></section>
+    <footer w3-include-html="./footer.html"></footer>
 
 </body>
 
@@ -191,89 +190,88 @@
 
 
 
-
-    $('#fullpage').fullpage({
-
-      anchors:['1', '2', '3', '4', '5' ],
-      menu: '#menu',
-      //navigation: true,
-
-
-
-
-
-      //continuousVertical: true,
-      //normalScrollElementTouchThreshold: 5,
-
-
-
-
-      //scrollOverflow: true, //если контент выходит за границы
-      //navigation: true, //кнопки по секциям
-      //navigationTooltips //массив всплывающих подсказок
-
-      //Design
-      //verticalCentered: true,
-      //resize : false,
-
-
-      //afterLoad: function(anchorLink, index){},
-
-      afterLoad: function(anchorLink, index){
-
-
-
-
-
-        // 
-        // var loadedSection = $(this);
-        // if(index == 5){
-        //   alert("Section 5");
-        //   alert(totalSlides);
-        // }
-        //
-
-
-
-
-
-        if (index === totalSlides) {
-          currentPos = $(window).scrollTop();
-          if (currentPos !== 0 ) {
-            /*setTimeout(function() {
-              $.fn.fullpage.setAutoScrolling(true);
-            }, 3000);*/
-            e = $('.fp-section.active');
-            console.log('pT: ' + e.position().top);
-            $.fn.fullpage.setAutoScrolling(true);
-          }
-
-          console.log('second last cp: ' + currentPos);
-        }
-
-
-
-        if (index === totalSlides) {
-          //$.fn.fullpage.setAutoScrolling(false);
-          //$.fn.fullpage.destroy();
-          //$.fn.fullpage.destroy('all');
-          //$.fn.fullpage.reBuild();
-
-            $.fn.fullpage.setAutoScrolling(false);
-            currentPos = $(window).scrollTop();
-            console.log('last section cp: ' + currentPos);
-            $(window).on('scroll', function() {
-              if ($(window).scrollTop() < currentPos - 20) {
-                $.fn.fullpage.moveSectionUp();
-
-                $(window).off('scroll');
-              }
-            });
-
-        }
-      }
-
-    });
+    //
+    // $('#fullpage').fullpage({
+    //
+    //   //anchors:[ 's1', 's2', 's3', 's4', 's5' ],
+    //   menu: '#menu',
+    //   //navigation: true,
+    //
+    //
+    //   //continuousVertical: true,
+    //   //normalScrollElementTouchThreshold: 5,
+    //
+    //
+    //   //scrollOverflow: true, //если контент выходит за границы
+    //   //navigation: true, //кнопки по секциям
+    //   //navigationTooltips //массив всплывающих подсказок
+    //
+    //   //Design
+    //   //verticalCentered: true,
+    //   //resize : false,
+    //
+    //
+    //   //afterLoad: function(anchorLink, index){},
+    //
+    //   afterLoad: function(anchorLink, index){
+    //
+    //
+    //     //
+    //     // var loadedSection = $(this);
+    //     // if(index == 5){
+    //     //   alert("Section 5");
+    //     //   alert(totalSlides);
+    //     // }
+    //     //
+    //
+    //
+    //
+    //         //
+    //         // if (index === totalSlides) {
+    //         //   currentPos = $(window).scrollTop();
+    //         //   if (currentPos !== 0 ) {
+    //         //     /*setTimeout(function() {
+    //         //       $.fn.fullpage.setAutoScrolling(true);
+    //         //     }, 3000);*/
+    //         //     e = $('.fp-section.active');
+    //         //     console.log('pT: ' + e.position().top);
+    //         //     $.fn.fullpage.setAutoScrolling(true);
+    //         //   }
+    //         //
+    //         //   console.log('currentPos: ' + currentPos);
+    //         // }
+    //
+    //
+    //
+    //         if (index === totalSlides) {
+    //           //$.fn.fullpage.setAutoScrolling(false);
+    //           //$.fn.fullpage.destroy();
+    //           //$.fn.fullpage.destroy('all');
+    //           //$.fn.fullpage.reBuild();
+    //
+    //             $.fn.fullpage.setAutoScrolling(false);
+    //             currentPos = $(window).scrollTop();
+    //             console.log('currentPos: ' + currentPos);
+    //             $(window).on('scroll', function() {
+    //               if ($(window).scrollTop() < currentPos - 20) {
+    //                 $.fn.fullpage.moveSectionUp();
+    //
+    //                 $(window).off('scroll');
+    //               }
+    //             });
+    //
+    //         }
+    //
+    //
+    //
+    //
+    //   }
+    //
+    // });
+    //
+    //
+    //
+    //
 
 
 
@@ -281,10 +279,12 @@
     //======================================
 
     $(window).scroll(function() {
-      var scrollTop = $(this).scrollTop();
+      var scrollTop = $(this).scrollTop(),
+          viewport = $(this).height();
+          //FixNav = $("#TEST_SECOND_NAV")
 
       //(scrollTop >= $(window).height() + 50)
-      if (scrollTop >= $(window).height() + 20) {
+      if ( scrollTop >= viewport ) {
         $("#TEST_SECOND_NAV").addClass("fixed");
         //$(".section-1").addClass("padding");
 
